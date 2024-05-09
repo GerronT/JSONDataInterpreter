@@ -147,7 +147,8 @@ export default {
             }
 
             if (!leftPaging.includes("...") || !rightPaging.includes("...")) {
-                if (this.totalPageNumber <= 10) {
+                // if total page number is less than or equal to 15, just show them all
+                if (this.totalPageNumber <= 15) {
                     leftPaging = [];
                     for (let i = 1; i <= this.totalPageNumber; i++) {
                         leftPaging.push(i);
